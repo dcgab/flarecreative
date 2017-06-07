@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600,700');
+
+$white: #ffffff;
+
+body {
+    font-family: 'Libre Franklin';
+    background: $white;
+}
+
+.main-header {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: {
+        image: url('../images/header.jpg');
+        size: auto;
+        position: top center;
+        attachment: fixed;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 960px;
+        img {
+            height: 180px;
+            margin-right: 30px;
+        }
+        .logo-text {
+            text-align: center;
+            text-align: left;
+            h1 {
+                color: $white;
+                font-weight: 300;
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            .subtitle {
+                color: $white;
+                display: block;
+                font-size: 17px;
+            }
+        }
+        
+    }
+}
+
+.main-nav {
+    background-color: $white;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 10;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 23px 0;
+        li {
+            display: inline-block;
+            margin: 0;
+            a {
+                text-decoration: none;
+                padding: 20px 18px;
+                color: #333;
+                font-weight: 600;
+                &.active {
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    padding-top: 80px;
+    .title {
+        h3 {
+            font-size: 2em;
+        }
+        
+    }
+    .welcome {
+        h4 {
+            font-weight: 700;
+        }
+        h5 {
+            margin-top: 1.3em;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #777;
+        }
+        ul {
+            li {
+                margin: 0;
+                font-size: 1.1em;
+            }
+        }
+    }
+}
