@@ -7,6 +7,10 @@ body {
     background: $white;
 }
 
+hr {
+    display: block;
+}
+
 .main-header {
     height: 600px;
     display: flex;
@@ -79,28 +83,62 @@ body {
 }
 
 .content {
-    padding-top: 80px;
-    .title {
-        h3 {
-            font-size: 2em;
-        }
-        
-    }
-    .welcome {
-        h4 {
-            font-weight: 700;
-        }
-        h5 {
-            margin-top: 1.3em;
-            font-size: 1.3em;
-            font-weight: 700;
-            color: #777;
-        }
-        ul {
-            li {
-                margin: 0;
-                font-size: 1.1em;
+    .home {
+        padding-top: 80px;
+        padding-bottom: 50px;
+        .title {
+            h3 {
+                font-size: 2em;
             }
+            
+        }
+        .welcome {
+            h4 {
+                font-weight: 700;
+            }
+            h5 {
+                margin-top: 1.3em;
+                font-size: 1.3em;
+                font-weight: 700;
+                color: #777;
+            }
+            ul {
+                li {
+                    margin: 0;
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+    .products {
+        padding-top: 60px;
+        text-align: center;
+        h1 {
+            margin-bottom: 80px;
+        }
+        .product {
+            width: 294px;
+            height: 294px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            background: {
+                color: pink;
+            }
+            .product-content {
+                display: inline-block;
+                text-align: center;
+            }
+        }
+    }
+    .product-logo {
+        background: {
+            image: url('../images/product-logo.jpg');
+            position: center 0px;
+            attachment: fixed;
+            size: cover;
         }
     }
 }

@@ -13,5 +13,12 @@ $(document).ready(function() {
             $('.main-nav').removeClass('fixed');
             $('html body').css({'padding-top': '0px'});
         }
+
+        if(wScroll > $('.products .row').offset().top - $(window).height()) {
+            console.log(wScroll - $('.products').offset().top);
+            $('.products .product').css({
+                'background-position': 'center '+ (wScroll - $('.products .row').offset().top + navHeight) +'px'
+            });
+        }
     });
 });
