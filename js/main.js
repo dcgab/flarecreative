@@ -16,8 +16,18 @@ $(document).ready(function() {
 
         if(wScroll > $('.products .row').offset().top - $(window).height()) {
             console.log(wScroll - $('.products').offset().top);
-            $('.products .product').css({
-                'background-position': 'center '+ (wScroll - $('.products .row').offset().top + navHeight) +'px'
+            $('.products .product-logo').css({
+                'background-position': 'center '+ ((wScroll - $('.products .row').offset().top + navHeight)*1.5) +'px'
+            });
+
+
+
+            $('.products .product-advertisement').css({
+                'background-position': 'center '+ ((wScroll - $('.products .row').offset().top + navHeight)*-1.5) +'px'
+            });
+
+            $('.products .product .product-fade').css({
+                opacity: (wScroll - $('.products .row').offset().top + navHeight + $(window).height()-400)/wScroll*2
             });
         }
     });

@@ -112,33 +112,109 @@ hr {
     }
     .products {
         padding-top: 60px;
+        padding-bottom: 60px;
         text-align: center;
-        h1 {
-            margin-bottom: 80px;
+        position: relative;
+        p {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 70px;
         }
         .product {
             width: 294px;
             height: 294px;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             border: 1px solid #ccc;
-            background: {
-                color: pink;
+            .product-fade {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                .product-content {
+                    display: inline-block;
+                    text-align: center;
+                    color: $white;
+                    h5 {
+                        margin: 0;
+                    }
+                    p {
+                        margin-bottom: 20px;
+                    }
+                    a {
+                        color: $white;
+                    }
+                }
             }
-            .product-content {
-                display: inline-block;
-                text-align: center;
+            
+        }
+        .product-logo {
+            background: {
+                image: url('../images/product-logo.jpg');
+                position: center 0px;
+                size: cover;
+            }
+        }
+        .product-media {
+            background: {
+                image: url('../images/twitch.png');
+                position: center 0px;
+                size: cover;
+                repeat: repeat-y;
+            }
+        }
+        .product-advertisement {
+            background: {
+                image: url('../images/cocacola.png');
+                position: center 0px;
+                size: cover;
+                repeat: repeat-y;
             }
         }
     }
-    .product-logo {
+    .about {
+        padding-top: 50px;
+        padding-bottom: 100px;
+        text-align: center;
+        .general {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        .six {
+            border: 1px solid #efefef;
+            padding: 20px;
+            border-radius: 1%;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+        }
+        .row {
+            text-align: left;
+            padding-top: 70px;
+            p {
+                font-size: 1.1em;
+            }
+            .name {
+                font-weight: 700;
+                font-size: 1.3em;
+            }
+            .title {
+                font-weight: 700;
+                font-size: .85em;
+                color: #999;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .fixed-image1 {
+        width: 100%;
+        height: 50vh;
         background: {
-            image: url('../images/product-logo.jpg');
-            position: center 0px;
-            attachment: fixed;
+            image: url('../images/keyboard.jpg');
             size: cover;
+            position: top center;
+            attachment: fixed;
         }
     }
 }
